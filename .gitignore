@@ -1,0 +1,7 @@
+*.o
+*.gcda
+*.a
+*.gcno
+a.out
+unit_tests
+main.cpp

@@ -1,0 +1,10 @@
+{
+    "testNumber": 12,
+    "testString": "test",
+    "testBool": true,
+    "testNull": null,
+    "testArray": [12],
+    "testObject": {
+        "test": 24
+    }
+}
