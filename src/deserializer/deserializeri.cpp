@@ -28,7 +28,7 @@ static std::string getKey(std::istream& is)
     return key;
 }
 
-json::JsonValue getObjectS(std::istream& is)
+static json::JsonValue getObjectS(std::istream& is)
 {
     json::JsonValue val = json::JsonValue::Object();
     std::string key;
@@ -58,7 +58,7 @@ json::JsonValue getObjectS(std::istream& is)
     return val;
 }
 
-json::JsonValue getArrayS(std::istream& is)
+static json::JsonValue getArrayS(std::istream& is)
 {
     json::JsonValue val = json::JsonValue::Array();
     size_t index = 0;
@@ -83,7 +83,7 @@ json::JsonValue getArrayS(std::istream& is)
     return val;
 }
 
-json::JsonValue getNumberS(std::istream& is)
+static json::JsonValue getNumberS(std::istream& is)
 {
     double val = 0;
     double temp = 0;
@@ -105,7 +105,7 @@ json::JsonValue getNumberS(std::istream& is)
     return json::JsonValue::Number(val);
 }
 
-json::JsonValue getBoolS(std::istream& is)
+static json::JsonValue getBoolS(std::istream& is)
 {
     std::string str;
     std::string t = "true";
@@ -121,7 +121,7 @@ json::JsonValue getBoolS(std::istream& is)
     throw std::exception();
 }
 
-json::JsonValue getStringS(std::istream& is)
+static json::JsonValue getStringS(std::istream& is)
 {
     std::string str;
 
@@ -137,7 +137,7 @@ json::JsonValue getStringS(std::istream& is)
     return json::JsonValue::String(str);
 }
 
-json::JsonValue getNullS(std::istream& is)
+static json::JsonValue getNullS(std::istream& is)
 {
     std::string str;
 
